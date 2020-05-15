@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% block title  %} HOME {% endblock title  %}
+{% block body %}
+
+<!-- ABOUT -->
+<section class="animations">
+  <div class="animations-container" >
+    <div class="ani ani-1">
+      <div class="ani-cube" >
+        <div class="cube-face face_front"></div>
+        <div class="cube-face face_right"></div>
+        <div class="cube-face face_left"></div>
+        <div class="cube-face face_top"></div>
+        <div class="cube-face face_bottom"></div>
+        <div class="cube-face face_back"></div>
+      </div>
+    </div>
+    <div class="ani ani-2">
+      <div class="ani-cube ani-cube-2">
+        <div class="cube-face face_front"></div>
+        <div class="cube-face face_right"></div>
+        <div class="cube-face face_left"></div>
+        <div class="cube-face face_top"></div>
+        <div class="cube-face face_bottom"></div>
+        <div class="cube-face face_back"></div>
+      </div>
+    </div>
+    <div class="ani ani-3">
+      <div class="ani-cube ani-cube-3">
+        <div class="cube-face face_front"></div>
+        <div class="cube-face face_right"></div>
+        <div class="cube-face face_left"></div>
+        <div class="cube-face face_top"></div>
+        <div class="cube-face face_bottom"></div>
+        <div class="cube-face face_back"></div>
+      </div>
+    </div>
+    <div class="ani ani-4">
+      <div class="ani-hamburger">
+        <div class="hamburger-line hamburger-line_top"></div>
+        <div class="hamburger-line hamburger-line_middle"></div>
+        <div class="hamburger-line hamburger-line_bottom"></div>
+      </div>
+    </div>
+    <div class="ani ani-5">
+      <div class="moving-square-frame"></div>
+      <div class="ani-moving-square"></div>
+    </div>
+    <div class="ani ani-6">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 1024 1024">
+        <path id="followPath"
+          d="M394.1-214.9c-49.7,89.4,114.4,192.8,175.5,475.1c13,60.1,85.4,424-98.1,552.6 c-95.7,67-267.2,74.5-346.3-22.1c-70.8-86.5-49-233.9,19.2-305.2c102.4-107,353.9-89.1,593.2,96.5c139.6,107,294.1,258.4,415,468.6 c19.2,33.5,36.6,66.6,52.3,99.3c13,8.6,34,19.5,53.3,13.2c148-48.6,165.1-1094.5-338.5-1374.8C723.7-320.8,449-313.8,394.1-214.9z">
+        </path>
+        <path id="dashedPath"
+          d="M394.1-214.9c-49.7,89.4,114.4,192.8,175.5,475.1c13,60.1,85.4,424-98.1,552.6 c-95.7,67-267.2,74.5-346.3-22.1c-70.8-86.5-49-233.9,19.2-305.2c102.4-107,353.9-89.1,593.2,96.5c139.6,107,294.1,258.4,415,468.6 c19.2,33.5,36.6,66.6,52.3,99.3c13,8.6,34,19.5,53.3,13.2c148-48.6,165.1-1094.5-338.5-1374.8C723.7-320.8,449-313.8,394.1-214.9z">
+        </path>
+        <path id="airplain" d="M8.04 84L92 48 8.04 12 8 40l60 8-60 8z">
+          <animateMotion xlink:href="#airplain" dur="6s" fill="freeze" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#followPath"></mpath>
+          </animateMotion>
+        </path>
+      </svg>
+    </div>
+  </div>
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container " style="margin-top: -10%;">
+      <div class="row">
+
+        <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+          <div class="about-text">
+            <h1 class="animated animated-text">
+              <span class="mr-2">Hey folks,We are</span>
+              <div class="animated-info">
+                <span class="animated-item">DSC NITR</span>
+                <span class="animated-item">DSC NITR</span>
+                <span class="animated-item">DSC NITR</span>
+              </div>
+            </h1>
+            <small class="small-text">Powered by <span class="mobile-block"> Google Developer!</span></small>
+            <p>Building a successful product is a challenge.We are highly energetic in user experience App development,
+              interfaces and web development.</p>
+
+            <div class="custom-btn-group mt-4">
+              <a href="https://developers.google.com/community/dsc" class="btn mr-lg-2 custom-btn"> GET STARTED </a>
+              <a href="/idea" class="btn custom-btn custom-btn-bg custom-btn-link"> Submit Your Idea</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="">
+            <img id="hero" src="static/images/undraw/hero.svg" class="img-fluid animated"
+              style="animation: up-down 2s ease-in-out infinite alternate-reverse both;" alt="svg image">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</section>
+
+
+
+
+<section id="about">
+  <div class="box">
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-7" id="about-video"><iframe style="max-width: 100%;" width="560" height="315"
+              src="https://www.youtube.com/embed/wTLe8nwJ_Lw" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-5" id="about-content">Developer Student Club (DSC) is a Google Developers program for
+            university students to learn mobile and web development skills. The club will be open to any student,
+            ranging
+            from novice developers who are just starting, to advanced developers who want to further their skills. The
+            club is intended as a space for students to try out new ideas and collaborate to solve mobile and web
+            development problems.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container text-center" style="padding-left: 23%; padding-right: 20%;">
+    <h2> Contribution </h2>
+    <p class="text mx-15">DSC NIT Rourkela has undertaken projects in association with other clubs to solve problems
+      related to the
+      Institute.</p>
+    <a href="https://github.com/developer-student-clubs-nitr" target="_blank" rel="noopener">
+      <button type="button" class="btn btn-secondary"> OUR PROJECTS </button>
+    </a>
+  </div>
+</section>
+
+
+<section>
+  <div class="container text-center" style="padding-left: 23%; padding-right: 20%;">
+    <h2> Events </h2>
+    <p class="text-center ">DSC NIT Rourkela has organised a number of workshops, fun events and meetups with students
+      in and around NIT
+      Rourkela to promote learning and developer skills among themselves.</p>
+    <a href="/events" target="_blank" rel="noopener">
+      <button type="button" class="btn btn-secondary"> OUR EVENTS </button>
+    </a>
+  </div>
+</section <!--------------------------TEAM SECTION -------------------->
+
+<section>
+  <div class="container text-center" style="padding-left: 23%; padding-right: 20%;">
+
+    <h2> Get to know Our Team </h2>
+    <p>We’ve got a strong team filled with caffeine addicted developers, gradients loving designers and machine like
+      working coders.
+    </p>
+    <a href="/events" target="_blank" rel="noopener">
+      <button type="button" class="btn btn-secondary"> THE TEAM </button>
+    </a>
+  </div>
+</section>
+
+
+
+<section class="site-section text-center" id="contact-section">
+  <div class="container">
+
+    <div id="social-heading">
+      <h2> Connect </h2>
+      <p>We are highly active on Social handles.</p>
+    </div>
+
+    <div class="row" style="padding-left: 140px; padding-right: 140px;">
+      <div class="col social-icons">
+        <a href="https://www.facebook.com/OpenCodeCommunity/"><i class="icofont-facebook" style="font-size: 48px;
+"></i></a>
+      </div>
+
+      <div class="col social-icons">
+        <a href="https://instagram.com/dsc.nitr?igshid=1cxnd3olfq2ja"><i class="icofont-instagram" style="font-size: 48px;
+"></i></a>
+      </div>
+
+      <div class="col social-icons">
+        <a href="https://github.com/developer-student-clubs-nitr"><i class="icofont-github" style="font-size: 48px;
+"></i></a>
+      </div>
+
+      <div class="col social-icons">
+        <a href="mailto:dsc.nitr@gmail.com"><i class="icofont-email" style="font-size: 48px;
+"></i></a>
+      </div>
+
+      <div class="col social-icons">
+        <a href="mailto:dsc.nitr@gmail.com"><i class="icofont-twitter" style="font-size: 48px;"></i></a>
+      </div>
+
+      <div class="col social-icons">
+        <a href="mailto:dsc.nitr@gmail.com"><i class="icofont-youtube" style="font-size: 48px;"></i></a>
+      </div>
+    </div>
+
+
+  </div>
+
+</section>
+
+<section class="site-section text-center" id="sub">
+  <div class="container">
+    <h2> Follow Us </h2>
+    <p>Follow us on Github to get latest updates of your work.</p>
+    <a href="/events" target="_blank" rel="noopener">
+      <button type="button" class="btn btn-secondary"> SUBSCRIBE </button>
+    </a>
+  </div>
+</section>
+
+
+{% endblock body %}

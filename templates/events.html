@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block title  %} EVENTS {% endblock title  %}
+{% block body %}
+<div class=text-center>
+<h2>GitHub API</h2>
+    <p>
+        <strong>{{ user.name }}</strong> has
+        <strong>{{ user.public_repos }}</strong> public repositories.
+      </p>
+
+</div>
+
+<!-- FEATURES -->
+<section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4">WORKSHOPS </h2>
+
+                <div class="timeline">
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span> Python Workshop </span><small>April 10th-11th 2019</small></h3>
+                            <p>It is a py workshop after all</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Git and GitHub Workshop</span><small>Aug 28th 2019</small></h3>
+                            <p>Learn git cool !</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>GCP Crash Course</span></h3><small>Oct 1st-31th 2019</small></h3>
+                            <p>Google cloud course</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>ExploreML Beginner Track Innovision<small>Oct 26th 2019</small></h3>
+                            <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget
+                                magna consequat viverra.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>ExploreML Intermediate Track NITR<small>November 9th-10th 2019</small></h3>
+                            <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget
+                                magna consequat viverra.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>ExploreML Beginner Track NITR<small>Oct 26th 2019</small></h3>
+                            <p>Cras scelerisque scelerisque condimentum. Nullam at volutpat mi. Nunc auctor ipsum eget
+                                magna consequat viverra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4 mobile-mt-2">EVENTS</h2>
+                <div class="member">
+                    <img height="260px"
+                        src="https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FAA.jpeg?alt=media"
+                        alt="">
+                    <h3> Hacktoberfest </h3>
+                    <span>October 1st-31th 2019</span>
+                    <p>
+                        Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in
+                        partnership with GitHub and Twilio. Hacktoberfest is open to everyone in our global community!
+                    </p>
+
+                </div>
+
+                <div class="member">
+                    <img height="260px"
+                        src="https://firebasestorage.googleapis.com/v0/b/project-banana-4822.appspot.com/o/images%2FAA.jpeg?alt=media"
+                        alt="">
+                    <h3> Hacktoberfest Meetup </h3>
+                    <span>October 19th 2019</span>
+                    <p>
+                        Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in
+                        partnership with GitHub and Twilio. Hacktoberfest is open to everyone in our global community!
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
