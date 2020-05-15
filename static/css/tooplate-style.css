@@ -265,7 +265,6 @@ b, strong {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-
 .copyright-text {
   font-size: 16px;
   font-weight: normal;
@@ -312,6 +311,10 @@ b, strong {
   color: #ffffff;
 }
 .dark-mode .small-text {
+  background: #0d0c15;
+  color: #ffffff;
+}
+.dark-mode.ppl{
   background: #0d0c15;
   color: #ffffff;
 }
