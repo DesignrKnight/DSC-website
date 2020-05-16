@@ -1,11 +1,18 @@
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
-from home.models import Contact
+from home.models import Contact , feedback
 from django.contrib import messages
 from github import Github, GithubException
 import requests
  #Create your views here.
 def index(request):
+    if request.method == "POST" :
+        name = request.POST.get('name')
+        desc = request.POST.get('desc')
+        
+        index = feedback(name=name , desc= desc , date= datetime.today() )
+        index.save()
+        messages.success(request,'Your feedback form has been sent!')
     return render(request,'index.html')
     #return HttpResponse("this is homepage")
 
@@ -44,10 +51,9 @@ def idea(request):
     if request.method == "POST" :
         name = request.POST.get('name')
         email = request.POST.get('email')
-        phone = request.POST.get('phone')
         desc = request.POST.get('desc')
         
-        idea = Contact(name=name , email=email , phone= phone , desc= desc , date= datetime.today() )
+        idea = Contact(name=name , email=email , desc= desc , date= datetime.today() )
         idea.save()
         messages.success(request,'Your form has been sent!')
     return render (request,'idea.html')

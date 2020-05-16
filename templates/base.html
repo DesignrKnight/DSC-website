@@ -69,77 +69,36 @@
     </div>
   </nav>
 
+{% if messages %}
+{% for message in messages%}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 role="alert">
+ {{ message }}
+ <button type="button" class="close" data-dismiss="alert" aria-label="close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+{% endfor %}
+{% endif %}
+
   {% block body %} {% endblock body %}
 
 
-
-  <!-- CONTACT -->
-  <section class="contact py-5" id="contact">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-5 mr-lg-5 col-12">
-          <div class="google-map w-100">
-            <iframe
-              src="https://www.google.com/maps?q=nit%20rourkela&t=&z=15&ie=UTF8&iwloc=&output=embed" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-            <div class="contact-info-item">
-              <h5 class="mb-3 text-white">National Institute of Technology,Rourkela, Odisha 769008</h5>
-              <p class="footer-text mb-0">010 020 0960</p>
-              <p><a href="mailto:hello@company.co">hello@company.co</a></p>
-            </div>
-
-            <ul class="social-links">
-              <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left"
-                  title="Instagram"></a></li>
-              <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-12">
-          <div class="contact-form">
-            <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-            <form action="" method="get">
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
-                </div>
-
-                <div class="col-lg-6 col-12">
-                  <input type="email" class="form-control" name="email" placeholder="Email" id="email">
-                </div>
-
-                <div class="col-12">
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
-                </div>
-
-                <div class="ml-lg-auto col-lg-5 col-12">
-                  <input type="submit" class="form-control submit-btn" value="Send Button">
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
   <section id="contact" <footer class="site-footer">
 
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h2 class="footer-heading mb-4">Feedback</h2>
-          <button type="button" class="btn btn-secondary">SUBMIT </button>
-          <p>Your Opinion Matters!</p>
+          
+        <div class="google-map w-100">
+          <iframe src="https://www.google.com/maps?q=nit%20rourkela&t=&z=15&ie=UTF8&iwloc=&output=embed" width="400"
+            height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+
         </div>
         <div class="col-md-4">
-          <h2 class="footer-heading mb-4">Useful Links</h2>
+          <h2 class="footer-heading mb-4 ">Useful Links</h2>
           <a href="https://developer.android.com/">Android</a><br>
           <a href="https://cloud.google.com/">Cloud</a><br>
           <a href="https://developers.google.com/programs/dsc/">Developer Student Clubs</a><br>
@@ -151,13 +110,13 @@
         <div class="col-md-4">
           <h2 class="footer-heading mb-4">Contact Us</h2>
 
+          NATIONAL INSTITUTE OF TECHNOLOGY,ROURKELA, ODISHA 769008
           
-          National Institute of Technology, Rourkela
           <br>
           
           Email: <a href="mailto://dsc.nitr@gmail.com">dsc.nitr@gmail.com</a>
         </div>
-
+        
 
       </div>
     </div>

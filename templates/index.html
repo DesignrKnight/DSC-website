@@ -4,9 +4,9 @@
 
 <!-- ABOUT -->
 <section class="animations">
-  <div class="animations-container" >
+  <div class="animations-container">
     <div class="ani ani-1">
-      <div class="ani-cube" >
+      <div class="ani-cube">
         <div class="cube-face face_front"></div>
         <div class="cube-face face_right"></div>
         <div class="cube-face face_left"></div>
@@ -203,6 +203,7 @@
       <div class="col social-icons">
         <a href="mailto:dsc.nitr@gmail.com"><i class="icofont-youtube" style="font-size: 48px;"></i></a>
       </div>
+
     </div>
 
 
@@ -219,6 +220,37 @@
     </a>
   </div>
 </section>
+
+
+
+<!-- CONTACT -->
+<section class="site-section text-center" id="sub">
+  <div class="container">
+        <div class="contact-form">
+          <h3 class="mb-4">Let's talk Your Opinion Matters!</h3>
+
+          <form method="post" action="/">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name(optional)">
+
+              </div>
+              <div class="col-12">
+                <textarea  class="form-control" id="desc" cols="30" rows="4" name="desc"
+                  placeholder="Effective feedback in the form of praise lets Our team know that "></textarea>
+              </div>
+
+              <div class="ml-lg-auto col-lg-2 col-12">
+                <input type="submit" class="form-control submit-btn" value="Send Button">
+              </div>
+            </div>
+          </form>
+        </div>
+  </div>
+  </section>
+
+
 
 
 {% endblock body %}

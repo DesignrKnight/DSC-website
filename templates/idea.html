@@ -1,54 +1,92 @@
 {% extends 'base.html' %}
-{% block title  %}   Idea  {% endblock title  %}
-{% block body %} 
+{% block title  %} Idea {% endblock title  %}
+{% block body %}
 
 <section id="team" class="team section-bg">
 
-    <div class="container">
+  <div class="container">
     <div class="row">
-    <div class="col-md-4 my-0">
-    <img src="static/images/bulb.png" height="400px">
-    </div>
-        <div class=" col-md-8 section-title">
-            <img class="img-fluid" src="static/images/tag01.png">
-            <div class="animated-info  text-center py-3" style="margin-left:30%;">
-                <span class="animated-item">Turn Your Idea into Real</span>
-                <span class="animated-item"> DSC Idea Hub</span>
-                <span class="animated-item"> An Idea</span>
-            </div>
-            
-            <p class="text-center" style="margin-top:10%;">Are you sitting on an idea? No matter how small or outlandish it may be, We try to act on it and turn it into reality.</p>
+      <div class="col-md-4 my-0">
+
+        <img id="bulb" class="bulb" src="static/images/bulb.png" height="350px"
+          style="animation: up-down 2s ease-in-out infinite alternate-reverse both;">
+      </div>
+      <div class=" col-md-8 section-title">
+        <img class="img-fluid" src="static/images/tag01.png">
+        <div class="animated-info  text-center py-3" style="margin-left:30%;">
+          <span class="animated-item">Turn Your Idea into Real</span>
+          <span class="animated-item"> DSC Idea Hub</span>
+          <span class="animated-item"> An Idea</span>
         </div>
-    
+
+        <p class="text-center" style="margin-top:10%;">Are you sitting on an idea? No matter how small or outlandish it
+          may be, We try to act on it and turn it into reality.</p>
+      </div>
+
     </div>
-    </div>
+  </div>
 </section>
+
 <div class="container-fluid my-0 px-0 py-0">
 
-<h3 class="text-center my-3"> CONTACT US </h3>
+  <h3 class="text-center my-3">Submit Your Idea here </h3>
 </div>
-<div class="container my-3">
-<form method="post" action="/idea" >
-{% csrf_token %}
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name = "name" placeholder="Enter your name">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Email Address</label>
-    <input type="email" class="form-control" id="exampleFormControlSelect1" name = "email" placeholder="abc@gmail.com">
-  </div>
-  <div class="form-group">
-    <label for="Phone">Phone Number</label>
-    <input type="Phone" class="form-control" id="Phone" name = "phone" placeholder="XXXXXXXXXX">
-  </div>
-  <div class="form-group">
-    <label for="desc">Description</label>
-    <input type="Phone" class="form-control" id="desc" rows="5" name = "desc" placeholder="about your project">
-  </div>
-  <button class="btn btn-primary  my-3" type="submit"> Submit </button>
+<div class="contact-form container my-3">
+  <form method="post" action="/idea">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Email Address</label>
+      <input type="email" class="form-control" id="exampleFormControlSelect1" name="email" placeholder="abc@gmail.com">
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <textarea rows="6" class="form-control" id="desc"  cols="30" rows="7"  name="desc"
+            placeholder="Give a vivid description of how you envision your app,covering all the details about your project"></textarea>
+        </div>
+     <div class="ml-lg-auto col-lg-3 col-12">
+          <input type="submit" class="form-control submit-btn" value="Send Button">
+        </div>
+  </form>
 
-</form>
+
+
+
 </div>
+<div class= "container" style="margin-top:10%;margin-bottom:8%;">
+<div class= "row">
+<div class="col-md-6">
+<img class="align-content-center" width="450" hieght="200" style="margin-left:10%;" src="static/images/process.png">
+
+
+</div>
+<div class="col-md-6 container-fluid text-center my-5">
+
+ 
+<h4>Ideation Procedure </h4>
+
+<p class="text-center ">One of the challenges that every innovative leader faces is how to select among different ideas that emerge during the innovation process.
+</p>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<p class="container text-center mx-5 px-2">{% lorem 5 b random %}</p>
+
+
+
 
 {% endblock body %}

@@ -139,6 +139,9 @@ b, strong {
   animation-delay: 4s;
 }
 
+.bulb{
+animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
 @keyframes BottomTotop {
   0% {
     opacity: 0;
