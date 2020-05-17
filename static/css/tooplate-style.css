@@ -104,7 +104,7 @@ b, strong {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
-  min-width: 260px;
+  min-width: 360px;
   position: relative;
 }
 
@@ -348,6 +348,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 .timeline-wrapper:before {
   content: "";
   background: #474559;
+  opacity:0.4;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -356,6 +357,8 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 
 .timeline-yr {
   background: #474559;
+  color:#474559;
+  opacity:0.7;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -440,7 +443,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 .contact-form .form-control {
   background: transparent;
-  border-radius: 2px;
+  border-radius: 10px;
   outline: none;
   box-shadow: none;
   font-weight: bold;
@@ -512,6 +515,12 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
   .contact-info {
     padding: 0 2rem;
   }
+  .images
+  {
+    width:90%;
+    
+    
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -534,6 +543,12 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
 
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
+  }
+  .images
+  {
+    width:75%;
+    
+    
   }
 }
 @media (max-width: 580px) {
@@ -561,6 +576,12 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
     display: block;
     margin: 10px 0 0 0;
   }
+  .images
+  {
+    width:70%;
+    
+    
+  }
 }
 @media (max-width: 320px) {
   .animated-text {
@@ -586,6 +607,12 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
   .social-links li {
     display: inline-block;
     vertical-align: top;
+  }
+  .images
+  {
+    width:50%;
+    
+    
   }
 }
 

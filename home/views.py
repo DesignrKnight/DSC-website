@@ -1,10 +1,15 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from datetime import datetime
-from home.models import Contact , feedback
+from home.models import Contact , feedback 
 from django.contrib import messages
 from github import Github, GithubException
 import requests
+from django.contrib.auth.models import User
+from django.contrib.auth import logout, authenticate, login 
+from django.contrib.auth.forms import UserCreationForm
  #Create your views here.
+
+ #password for test user is simmi2428
 def index(request):
     if request.method == "POST" :
         name = request.POST.get('name')
@@ -23,31 +28,13 @@ def team(request):
     return render(request,'team.html')
 
 def events(request):
-    search_result = {}
-    if 'username' in request.GET:
-        username = request.GET['Praisysam']
-        client = Github('Praisysam', 'Praisy4822')
-
-        try:
-            user = client.get_user(username)
-            search_result['name'] = user.name
-            search_result['login'] = user.login
-            search_result['public_repos'] = user.public_repos
-            search_result['success'] = True
-        except GithubException as ge:
-            search_result['message'] = ge.data['message']
-            search_result['success'] = False
-
-        rate_limit = client.get_rate_limit()
-        search_result['rate'] = {
-            'limit': rate_limit.rate.limit,
-            'remaining': rate_limit.rate.remaining,
-        }
-
-    return render(request, 'events.html', {'search_result': search_result})
+    return render(request, 'events.html')
     #return render(request,'events.html')
 
 def idea(request):
+    print(request.user)
+    if request.user.is_anonymous:
+        return redirect("/login") 
     if request.method == "POST" :
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -57,3 +44,28 @@ def idea(request):
         idea.save()
         messages.success(request,'Your form has been sent!')
     return render (request,'idea.html')
+
+def loginUser(request):
+    if request.method=="POST":
+        
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(username, password)
+
+        # check if user has entered correct credentials
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            # A backend authenticated the credentials
+            login(request, user)
+            return redirect("/idea")
+
+        else:
+            # No backend authenticated the credentials
+            return render(request, 'login.html')
+
+    return render(request, 'login.html')
+
+def logoutUser(request):
+    logout(request)
+    return redirect("/login")

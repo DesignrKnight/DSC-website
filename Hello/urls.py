@@ -20,7 +20,12 @@ admin.site.site_header ="Praisy Admin"
 admin.site.site_title ="Praisy Admin Portal"
 admin.site.index_title ="Welcome to Praisy's Login Portal"
 
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls'))
+    path('', include('home.urls')),
+   
 ]
