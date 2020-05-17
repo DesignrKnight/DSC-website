@@ -7,6 +7,17 @@ import requests
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, authenticate, login 
 from django.contrib.auth.forms import UserCreationForm
+
+
+from django.contrib.auth import (
+    authenticate,
+    get_user_model,
+    login,
+    logout
+)
+
+from .forms import UserLoginForm, UserRegisterForm
+
  #Create your views here.
 
  #password for test user is simmi2428
@@ -45,27 +56,46 @@ def idea(request):
         messages.success(request,'Your form has been sent!')
     return render (request,'idea.html')
 
-def loginUser(request):
-    if request.method=="POST":
-        
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        print(username, password)
 
-        # check if user has entered correct credentials
+
+def login_view(request):
+    next = request.GET.get('next')
+    form = UserLoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
         user = authenticate(username=username, password=password)
+        login(request, user)
+        if next:
+            return redirect(next)
+        return redirect('/idea')
 
-        if user is not None:
-            # A backend authenticated the credentials
-            login(request, user)
-            return redirect("/idea")
+    context = {
+        'form': form,
+    }
+    return render(request, "login.html", context)
 
-        else:
-            # No backend authenticated the credentials
-            return render(request, 'login.html')
 
-    return render(request, 'login.html')
+def register_view(request):
+    next = request.GET.get('next')
+    form = UserRegisterForm(request.POST or None)
+    if form.is_valid():
+        user = form.save(commit=False)
+        password = form.cleaned_data.get('password')
+        user.set_password(password)
+        user.save()
+        new_user = authenticate(username=user.username, password=password)
+        login(request, new_user)
+        if next:
+            return redirect(next)
+        return redirect('/idea')
 
-def logoutUser(request):
+    context = {
+        'form': form,
+    }
+    return render(request, "signup.html", context)
+
+
+def logout_view(request):
     logout(request)
-    return redirect("/login")
+    return redirect('/idea')
