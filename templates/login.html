@@ -31,17 +31,28 @@
   </style>
 </head>
 
-<body style="margin:10%;">
+<body>
 <div class="row justify-content-center">
     <div class="col-6">
       <div class="card">
         <div class="card-body">
-          <h2>Log in</h2>
+          
           <form method="POST">
         {% csrf_token %}
-        {{ form }}
-            <button type="submit" class="btn btn-primary">Log in</button>
-            
+        <h1 class="h3 mb-3 font-weight-normal">Please Login here</h1>
+        <label for="inputEmail" class="sr-only pb-2">Username</label>
+        <input type="text" id="inputEmail" name="username" class="form-control pb-2" placeholder="Username" required
+            autofocus>
+        <label for="inputPassword" class="sr-only pb-2" style="position:relative;">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block my-3" type="submit">Login in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; DSC NITR 2020</p>
+        
           </form>
         </div>
       </div>
